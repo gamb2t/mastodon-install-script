@@ -22,7 +22,7 @@ git clone https://github.com/mastodon/mastodon.git ~/live
 cd ~/live
 
 # Install packages
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt install -y npm
 sudo apt install -y \
   ufw imagemagick ffmpeg libpq-dev libxml2-dev libxslt1-dev file git-core \
@@ -57,7 +57,7 @@ rbenv global $(cat ~/live/.ruby-version)
 printf y | sudo ufw enable
 sudo ufw allow 80
 sudo ufw allow 443
-sudo ufw allow 22 #sshシャットアウト対策
+sudo ufw allow 22 
 
 # Install yarn
 sudo npm install -g yarn
